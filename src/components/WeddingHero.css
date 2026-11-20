@@ -123,7 +123,13 @@
   letter-spacing: 3px;
   margin-top: 15px;
 }
-
+.polaroid-caption h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #253d57;
+  margin-top: 15px;
+}
 /* BOTTOM TEXT */
 .hero-bottom {
   position: absolute;
@@ -175,6 +181,13 @@
     font-size: clamp(55px, 12vw, 90px);
   }
 }
+.polaroid-caption h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #253d57;
+  margin-top: 15px;
+}
 
 /* MOBILE */
 
@@ -184,7 +197,13 @@
   .wedding-hero {
     min-height: 100svh;
   }
-
+.polaroid-caption h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #253d57;
+  margin-top: 15px;
+}
   .hero-background-blur {
     object-fit: cover;
     filter: grayscale(100%) blur(15px) brightness(0.3);
@@ -210,14 +229,11 @@
     width: 100%;
     padding: 60px 18px;
   }
-
-  .hero-eyebrow {
-    font-size: 7px;
-    letter-spacing: 2.5px;
-    margin-bottom: 22px;
+  .polaroid-caption {
+    font-size: 10px;
   }
 
-  .hero-names {
+  .hero-eyebrow {
     font-size: clamp(38px, 11vw, 55px);
     letter-spacing: -1px;
     line-height: 0.95;
@@ -252,4 +268,15 @@
     font-size: 6px;
     letter-spacing: 0.8px;
   }
+}
+
+.polaroid-caption h3 {
+  font-family: Arial, sans-serif;
+  font-size: 10px !important;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  color: #253d57;
+  margin-top: 15px;
+  margin-bottom: 0;
 }

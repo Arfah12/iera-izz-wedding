@@ -115,7 +115,7 @@
 
 .polaroid-caption h3 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: 400;
   margin: 6px 0 0;
   color: #294765;
@@ -201,6 +201,9 @@
   .couple-gallery {
     gap: 45px;
   }
+  .polaroid-caption {
+    font-size: 10px;
+  }
 
   .polaroid-card {
     width: min(42%, 300px);
@@ -268,11 +271,11 @@
   }
 
   .polaroid-caption {
-    padding-top: 17px;
+    padding-top: 15px;
   }
 
   .polaroid-caption h3 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .couple-main-photo {
@@ -314,7 +317,9 @@
   .polaroid-card {
     width: 88%;
   }
-
+.polaroid-caption {
+    font-size: 14px;
+  }
   .polaroid-image {
     height: 285px;
   }
