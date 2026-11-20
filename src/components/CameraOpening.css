@@ -1,0 +1,644 @@
+
+.camera-opening {
+  min-height: 100vh;
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  color: #294765;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 20px 85px;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.camera-scene {
+  width: 100%;
+  max-width: 680px;
+  min-height: 650px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.camera-eyebrow {
+  font-size: 10px;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  color: #7896b8;
+}
+
+.camera-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 0 0 55px;
+  color: #294765;
+}
+
+.camera-title em {
+  font-style: italic;
+  color: #7896b8;
+}
+
+/* CAMERA */
+
+.vintage-camera {
+  width: min(340px, 85vw);
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+  background: linear-gradient(145deg, #383838, #111);
+  border-radius: 22px;
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.2),
+    inset 0 2px 3px rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.vintage-camera::before {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 20px;
+  background: #292929;
+  top: -17px;
+  left: 35px;
+  border-radius: 8px 8px 0 0;
+}
+
+.camera-brand {
+  position: absolute;
+  top: 22px;
+  left: 25px;
+  color: #dedbd3;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.camera-viewfinder {
+  position: absolute;
+  top: 45px;
+  left: 30px;
+  width: 38px;
+  height: 28px;
+  border: 3px solid #777;
+  border-radius: 5px;
+}
+
+.camera-viewfinder span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #171717;
+}
+
+.camera-flash {
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  width: 45px;
+  height: 25px;
+  border-radius: 4px;
+  background: #d7d5cf;
+  padding: 4px;
+}
+
+.camera-flash span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #f5f3ed;
+  border-radius: 2px;
+}
+
+.camera-lens {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: #222;
+  border: 7px solid #777;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 5px #303030;
+}
+
+.lens-ring {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  border: 3px solid #aaa;
+  display: grid;
+  place-items: center;
+  background: #080808;
+}
+
+.lens-inner {
+  width: 57px;
+  height: 57px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    #777,
+    #171717 45%,
+    #000 75%
+  );
+  display: grid;
+  place-items: center;
+}
+
+.lens-glass {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    #aaa,
+    #292929 50%,
+    #050505
+  );
+  border: 2px solid #555;
+}
+
+.camera-details {
+  position: absolute;
+  bottom: 18px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.camera-indicator {
+  width: 6px;
+  height: 6px;
+  background: #aaa;
+  border-radius: 50%;
+}
+
+.camera-label {
+  font-size: 7px;
+  letter-spacing: 2px;
+  color: #aaa;
+}
+
+.camera-slot {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 155px;
+  height: 8px;
+  background: #050505;
+  border-radius: 5px;
+  box-shadow: inset 0 2px 3px #777;
+}
+
+/* SHUTTER */
+
+.camera-shutter {
+  position: absolute;
+  top: -22px;
+  right: 60px;
+  width: 32px;
+  height: 14px;
+  border: 0;
+  border-radius: 6px 6px 2px 2px;
+  background: #76a2de;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #ececec;
+  animation: shutterBlink 1.6s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+
+.camera-shutter:hover:not(:disabled) {
+  background: #73c9e8;
+  transform: scale(1.1);
+}
+
+.camera-shutter:disabled {
+  cursor: default;
+}
+
+.camera-captured {
+  animation: cameraShake 0.25s ease;
+}
+
+.camera-captured .camera-shutter {
+  animation: none;
+}
+
+@keyframes cameraShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-4px);
+  }
+
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes shutterBlink {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 5px rgba(255,255,255,0.4),
+      0 0 18px rgba(255,255,255,0.7);
+  }
+}
+
+/* SNAP HINT */
+
+.camera-shutter-hint {
+  position: absolute;
+  right: -85px;
+  bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  z-index: 10;
+  pointer-events: none;
+  animation: hintFloat 1.8s ease-in-out infinite;
+}
+
+.snap-text {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #294765;
+  white-space: nowrap;
+}
+
+.snap-arrow {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1;
+  color: #7896b8;
+}
+
+.camera-captured .camera-shutter-hint {
+  display: none;
+}
+
+@keyframes hintFloat {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-5px);
+    opacity: 0.65;
+  }
+}
+
+/* POLAROID */
+
+.polaroid-print {
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  width: 350px;
+  padding: 8px 8px 13px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  transform: translate(-50%, -20px) scale(0.8);
+  opacity: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.polaroid-print.print-visible {
+  animation: printDevelop 2s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.polaroid-image {
+  display: block;
+  width: 150%;
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+  overflow: hidden;
+  background: #d0ceca;
+}
+
+.polaroid-image img {
+  display: block;
+  width: 100%;
+  height: 100% !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%);
+  transition: filter 5s ease-in-out;
+}
+
+.polaroid-print.print-visible .polaroid-image img {
+  filter: grayscale(0%);
+  transition-delay: 1.5s;
+}
+
+.polaroid-print p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 13px;
+  line-height: 1.2;
+  font-style: italic;
+  text-align: center;
+  margin: 8px 0 0;
+  color: #294765;
+}
+
+
+@keyframes printDevelop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px) scale(0.8) rotate(-3deg);
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 45px) scale(1) rotate(2deg);
+  }
+}
+
+/* INSTRUCTION */
+
+.camera-instruction {
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 75px;
+  color: #7896b8;
+}
+
+.camera-transition-text {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 20px;
+  color: #294765;
+}
+
+.discover-button {
+  margin-top: 25px;
+  background: transparent;
+  border: 1px solid #7896b8;
+  padding: 14px 25px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: #294765;
+  transition: all 0.3s ease;
+}
+
+.discover-button:hover {
+  background: #294765;
+  color: #ffffff;
+}
+
+.discover-button span {
+  margin-left: 12px;
+}
+
+/* FOOTER */
+
+.camera-footer {
+  position: absolute;
+  bottom: 22px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #7896b8;
+}
+
+/* CAMERA FLASH */
+
+.camera-flash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: #ffffff;
+  pointer-events: none;
+  animation: cameraFlash 0.65s ease-out forwards;
+}
+
+@keyframes cameraFlash {
+  0% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  35% {
+    opacity: 0.95;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 600px) {
+  .camera-opening {
+    padding: 45px 15px 85px;
+  }
+
+  .camera-scene {
+    min-height: 620px;
+  }
+
+  .camera-title {
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+
+  .camera-footer {
+    font-size: 7px;
+    letter-spacing: 1px;
+    left: 15px;
+    right: 15px;
+  }
+
+  .camera-shutter-hint {
+    right: -55px;
+    bottom: 10px;
+  }
+
+  .snap-text {
+    font-size: 8px;
+    letter-spacing: 1.5px;
+  }
+
+  .snap-arrow {
+    font-size: 20px;
+  }
+
+  .polaroid-print {
+    top: 275px;
+    width: 165px;
+    padding: 7px 7px 12px;
+  }
+
+  .polaroid-image {
+    height: 90px;
+  }
+
+  .polaroid-print p {
+    font-size: 12px;
+  }
+
+  .camera-instruction {
+    margin-top: 75px;
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+}
+
+/* IPHONE SE AND SMALL DEVICES */
+
+@media (max-width: 375px) {
+  .camera-opening {
+    padding: 35px 12px 75px;
+  }
+
+  .camera-scene {
+    min-height: 600px;
+  }
+
+  .camera-eyebrow {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .camera-title {
+    font-size: 36px;
+    margin-bottom: 45px;
+  }
+
+  .vintage-camera {
+    width: 290px;
+    height: 200px;
+  }
+
+  .camera-lens {
+    top: 65px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .lens-ring {
+    width: 75px;
+    height: 75px;
+  }
+
+  .lens-inner {
+    width: 50px;
+    height: 50px;
+  }
+
+  .polaroid-print {
+    top: 260px;
+    width: 155px;
+    padding: 7px 7px 11px;
+  }
+
+  .polaroid-image {
+    height: 85px;
+  }
+
+  .polaroid-print p {
+    font-size: 12px;
+  }
+
+  .camera-instruction {
+    margin-top: 70px;
+  }
+}
+
+/* SHORT SCREEN HEIGHT */
+
+@media (max-height: 700px) {
+  .camera-opening {
+    align-items: flex-start;
+  }
+
+  .camera-scene {
+    min-height: 620px;
+  }
+}
+
+/* TAP HERE HINT */
+
+.camera-shutter-hint {
+  position: absolute;
+  right: -30px;
+  bottom: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  z-index: 10;
+  pointer-events: none;
+  animation: hintFloat 1.8s ease-in-out infinite;
+}
+
+.snap-text {
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #294765;
+  white-space: nowrap;
+}
+
+.snap-arrow {
+  font-size: 25px;
+  font-weight: 300;
+
+  line-height: 1;
+  color: #7896b8;
+}
+
+.camera-captured .camera-shutter-hint {
+  display: none;
+}
+
+@keyframes hintFloat {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-5px);
+    opacity: 0.65;
+  }
+}

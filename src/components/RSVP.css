@@ -1,0 +1,173 @@
+
+.rsvp-section {
+  width: 100%;
+  padding: 75px 20px 80px;
+  background: #ffffff;
+  color: #111111;
+  box-sizing: border-box;
+}
+
+.rsvp-box {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rsvp-label {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #555555;
+  margin: 0 0 14px;
+}
+
+.rsvp-heading {
+  width: 100%;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(38px, 7vw, 50px);
+  font-weight: 500;
+  line-height: 1.05;
+  color: #111111;
+  margin: 0;
+}
+
+.rsvp-subtitle {
+  margin: 14px 0 30px;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666666;
+}
+
+.rsvp-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 13px 16px;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  outline: none;
+  background: #ffffff;
+  color: #111111;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  transition: border-color .2s ease;
+}
+
+.rsvp-form input::placeholder {
+  color: #777777;
+  opacity: 1;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus {
+  border-color: #111111;
+}
+
+.rsvp-form select {
+  cursor: pointer;
+}
+
+.rsvp-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.rsvp-options button {
+  min-height: 46px;
+  padding: 12px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  background: #ffffff;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.rsvp-options button:hover {
+  border-color: #111111;
+}
+
+.rsvp-options button.selected {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+.rsvp-button {
+  width: 100%;
+  min-height: 48px;
+  padding: 14px;
+  margin-top: 3px;
+  border: 1px solid #111111;
+  border-radius: 0;
+  background: #111111;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.rsvp-button:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+.rsvp-button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.rsvp-message {
+  width: 100%;
+  margin-top: 15px;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #333333;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .rsvp-section {
+    padding: 55px 22px 60px;
+  }
+
+  .rsvp-box {
+    max-width: 360px;
+  }
+
+  .rsvp-heading {
+    font-size: 39px;
+  }
+
+  .rsvp-subtitle {
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+
+  .rsvp-options button {
+    font-size: 10px;
+  }
+}
