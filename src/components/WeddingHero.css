@@ -32,13 +32,12 @@
 }
 
 
-/* ORIGINAL IMAGE */
 .hero-background {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: none;
   object-position: center;
   filter: grayscale(100%);
   animation: heroColourReveal 1.5s ease-in-out 1s forwards;
