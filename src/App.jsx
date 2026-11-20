@@ -294,7 +294,7 @@ export default function App() {
 
       {experienceStarted && (
         <>
-          <MusicPlayer shouldPlay={experienceStarted} />
+          <MusicPlayer />
 
           <main id="wedding-invitation">
 

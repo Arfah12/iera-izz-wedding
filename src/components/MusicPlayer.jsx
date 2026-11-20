@@ -1,16 +1,28 @@
 
 import { useEffect, useRef, useState } from "react";
+import { getBackgroundAudio } from "../services/backgroundMusic";
 import "./MusicPlayer.css";
 
-export default function MusicPlayer({ shouldPlay }) {
-  const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+export default function MusicPlayer() {
+  const audioRef = useRef(getBackgroundAudio());
+  const [isPlaying, setIsPlaying] = useState(
+    () => !getBackgroundAudio().paused
+  );
 
   useEffect(() => {
-    if (shouldPlay) {
-      toggleMusic();
-    }
-  }, [shouldPlay]);
+    const audio = audioRef.current;
+
+    const handlePlay = () => setIsPlaying(true);
+    const handlePause = () => setIsPlaying(false);
+
+    audio.addEventListener("play", handlePlay);
+    audio.addEventListener("pause", handlePause);
+
+    return () => {
+      audio.removeEventListener("play", handlePlay);
+      audio.removeEventListener("pause", handlePause);
+    };
+  }, []);
 
   const toggleMusic = async () => {
     const audio = audioRef.current;
@@ -31,15 +43,6 @@ export default function MusicPlayer({ shouldPlay }) {
 
   return (
     <>
-      <audio
-        ref={audioRef}
-        src="/assets/audio/background-music.mp3"
-        loop
-        preload="auto"
-        onPause={() => setIsPlaying(false)}
-        onPlay={() => setIsPlaying(true)}
-      />
-
       <button
         className="vinyl-button"
         onClick={toggleMusic}

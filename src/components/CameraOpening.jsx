@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { startBackgroundMusic } from "../services/backgroundMusic";
 import "./CameraOpening.css";
 
 export default function CameraOpening({ couplePhoto, onStartExperience }) {
@@ -11,6 +12,11 @@ export default function CameraOpening({ couplePhoto, onStartExperience }) {
     if (captured) return;
 
     setCaptured(true);
+
+    // Start on the user's direct gesture; browsers block delayed autoplay.
+    startBackgroundMusic().catch((error) => {
+      console.log("Background music could not start:", error);
+    });
 
     // Play shutter sound
     const shutterAudio = new Audio("/assets/audio/shutter.mp3");
