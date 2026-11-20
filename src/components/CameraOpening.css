@@ -599,7 +599,7 @@
 
 .camera-shutter-hint {
   position: absolute;
-  right: -30px;
+  right: -20px;
   bottom: 220px;
   display: flex;
   flex-direction: column;
