@@ -11,7 +11,7 @@ const events = [
     time: "9:00 AM – 11:00 AM",
     venue: "Dewan Seri Indah",
     address: "Parit Buntar, Perak",
-    map: "#",
+    map: weddingData.akad.mapsUrl,
   },
   {
     number: "02",
@@ -21,7 +21,7 @@ const events = [
     time: "12:00 PM – 4:00 PM",
     venue: "Dewan Seri Indah",
     address: "Parit Buntar, Perak",
-    map: "#",
+    map: weddingData.reception.mapsUrl,
   },
 ];
 
@@ -90,7 +90,7 @@ export default function EventDetails() {
                 target="_blank"
                 rel="noreferrer"
               >
-                VIEW LOCATION ↗
+                VIEW LOCATION
               </a>
             </div>
           </article>
@@ -157,7 +157,7 @@ export default function EventDetails() {
                 rel="noopener noreferrer"
                 className="contact-button"
               >
-                WHATSAPP ↗
+                WHATSAPP
               </a>
 
             </div>
