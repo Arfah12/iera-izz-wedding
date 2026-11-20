@@ -252,7 +252,7 @@
   }
 
   .invitation-couple h3 {
-    font-size: clamp(39px, 10vw, 47px);
+    font-size: clamp(20px, 10vw, 18px);
     line-height: 1.05;
   }
 
@@ -302,7 +302,7 @@
   }
 
   .invitation-couple h3 {
-    font-size: 37px;
+    font-size: 15px;
   }
 
   .invitation-date {
