@@ -1,0 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#wedding-hero {
+  width: 100%;
+  scroll-margin-top: 0;
+}
+
+#wedding-invitation {
+  width: 100%;
+  overflow-x: hidden;
+}

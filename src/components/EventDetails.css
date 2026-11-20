@@ -1,0 +1,484 @@
+
+.event-section {
+  width: 100%;
+  background: #faf9f6;
+  color: #171717;
+  padding: 110px 7%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* HEADER */
+.event-header {
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto 75px;
+}
+
+.event-eyebrow {
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 5px;
+  margin-bottom: 25px;
+  color: #888;
+}
+
+.event-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(48px, 7vw, 75px);
+  font-weight: 400;
+  line-height: 0.95;
+  margin: 0;
+  color: #000000;
+}
+
+.event-heading em,
+.schedule-header h3 em {
+  font-weight: 400;
+}
+
+.event-subheading {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.9;
+  color: #777;
+  margin-top: 25px;
+}
+
+/* EVENT GRID */
+.event-grid {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* EVENT CARD */
+.event-card {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  padding: 55px 35px;
+  text-align: center;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.event-number {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  color: #999;
+}
+
+.event-day {
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.event-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 37px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.event-divider {
+  width: 40px;
+  height: 1px;
+  background: #999;
+  margin: 25px auto 35px;
+}
+
+/* INFORMATION */
+.event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.event-info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.event-info-label {
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #999;
+}
+
+.event-info-item p {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.event-info-item small {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.7;
+  color: #888;
+}
+
+/* MAP BUTTON */
+.event-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.event-buttons a {
+  text-decoration: none;
+  border: 1px solid #171717;
+  color: #171717;
+  padding: 12px 17px;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.event-buttons a:hover {
+  background: #171717;
+  color: #fff;
+}
+
+/* TENTATIF */
+.event-schedule {
+  width: 100%;
+  max-width: 750px;
+  margin: 110px auto 0;
+  padding: 65px 30px;
+  background: #f0efeb;
+  box-sizing: border-box;
+}
+
+.schedule-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.schedule-header .event-eyebrow {
+  margin-bottom: 18px;
+}
+
+.schedule-header h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+
+.schedule-header > p:last-child {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  color: #777;
+  margin-top: 18px;
+}
+
+/* TIMELINE */
+.schedule-list {
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 100px 30px 1fr;
+  align-items: stretch;
+  min-height: 75px;
+}
+
+.schedule-time {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #777;
+  text-align: right;
+  padding: 3px 15px 25px 0;
+}
+
+.schedule-line {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.schedule-line::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: -1px;
+  width: 1px;
+  background: #c8c5be;
+}
+
+.schedule-item:last-child .schedule-line::after {
+  display: none;
+}
+
+.schedule-dot {
+  position: relative;
+  z-index: 1;
+  width: 7px;
+  height: 7px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: #777;
+}
+
+.schedule-activity {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 0 0 25px 15px;
+  color: #333;
+}
+
+/* FOOTER */
+.event-footer {
+  width: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: #888;
+  margin-top: 75px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .event-section {
+    padding: 90px 5%;
+  }
+
+  .event-grid {
+    gap: 20px;
+  }
+
+  .event-card {
+    padding: 50px 22px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .event-section {
+    padding: 80px 20px;
+  }
+
+  .event-header {
+    margin-bottom: 50px;
+  }
+
+  .event-eyebrow {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .event-heading {
+    font-size: 49px;
+  }
+
+  .event-subheading {
+    font-size: 12px;
+  }
+
+  .event-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 430px;
+  }
+
+  .event-card {
+    padding: 50px 22px;
+  }
+
+  .event-title {
+    font-size: 32px;
+  }
+
+  .event-info-item p {
+    font-size: 14px;
+  }
+
+  .event-schedule {
+    margin-top: 75px;
+    padding: 50px 15px;
+  }
+
+  .schedule-header {
+    margin-bottom: 40px;
+  }
+
+  .schedule-header h3 {
+    font-size: 43px;
+  }
+
+  .schedule-header > p:last-child {
+    font-size: 12px;
+  }
+
+  .schedule-list {
+    max-width: 400px;
+  }
+
+  .schedule-item {
+    grid-template-columns: 78px 24px 1fr;
+    min-height: 75px;
+  }
+
+  .schedule-time {
+    font-size: 9px;
+    padding-right: 9px;
+  }
+
+  .schedule-activity {
+    font-size: 12px;
+    padding-left: 10px;
+  }
+
+  .event-footer {
+    font-size: 7px;
+    line-height: 1.8;
+    letter-spacing: 2px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 380px) {
+  .event-section {
+    padding: 70px 16px;
+  }
+
+  .event-heading {
+    font-size: 43px;
+  }
+
+  .schedule-header h3 {
+    font-size: 38px;
+  }
+
+  .schedule-item {
+    grid-template-columns: 70px 20px 1fr;
+  }
+
+  .schedule-activity {
+    font-size: 11px;
+  }
+}
+
+
+/* CONTACT SECTION */
+
+.event-contact {
+  max-width: 620px;
+  margin: 90px auto 70px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.event-contact h3 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.event-contact h3 em {
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.contact-description {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 20px;
+  border: 1px solid rgba(120, 95, 75, 0.2);
+  background: rgba(255, 255, 255, 0.35);
+  text-align: left;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-details span {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #987e6b;
+  text-transform: uppercase;
+}
+
+.contact-details strong {
+  font-size: 13px;
+  font-weight: 500;
+  color: #493a30;
+}
+
+.contact-button {
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #fff;
+  background: #705747;
+  padding: 11px 15px;
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+.contact-button:hover {
+  background: #493a30;
+}
+
+@media (max-width: 480px) {
+  .event-contact {
+    margin: 65px auto 50px;
+  }
+
+  .event-contact h3 {
+    font-size: 27px;
+  }
+
+  .contact-item {
+    padding: 15px;
+  }
+}
+

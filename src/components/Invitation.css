@@ -1,0 +1,314 @@
+
+.invitation-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #faf9f6;
+  color: #29251f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 25px;
+  box-sizing: border-box;
+}
+
+.invitation-container {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+  margin: auto;
+  padding: 75px 55px;
+  border: 1px solid rgba(125, 108, 88, 0.35);
+  box-sizing: border-box;
+}
+
+/* BISMILLAH */
+
+.invitation-bismillah {
+  font-family: Georgia, serif;
+  font-size: clamp(25px, 4vw, 32px);
+  line-height: 1.8;
+  margin-bottom: 8px;
+  color: #594b3d;
+}
+
+.invitation-bismillah-translation {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #8c8073;
+  line-height: 1.9;
+}
+
+/* ORNAMENT */
+
+.invitation-ornament {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: #a18b70;
+  margin: 30px 0;
+  letter-spacing: 8px;
+}
+
+/* OPENING */
+
+.invitation-opening {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  line-height: 2.2;
+  margin-bottom: 30px;
+  color: #827568;
+  text-transform: uppercase;
+}
+
+/* HONORIFIC */
+
+.invitation-honorific {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #655b50;
+  margin-bottom: 28px;
+}
+
+/* PARENTS */
+
+.invitation-parents h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(20px, 4vw, 22px);
+  font-weight: 500;
+  line-height: 1.35;
+  color: #44382e;
+  margin: 0;
+}
+
+.invitation-parents span {
+  display: block;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #9a826a;
+  margin: 10px 0;
+}
+
+/* REQUEST */
+
+.invitation-request {
+  max-width: 500px;
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #71675d;
+  margin: 35px auto 20px;
+}
+
+/* GUEST */
+
+.invitation-guest {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(29px, 4.5vw, 22px);
+  font-weight: 500;
+  line-height: 1.4;
+  color: #65513e;
+}
+
+/* COUPLE */
+
+.invitation-couple {
+  margin-top: 35px;
+}
+
+.invitation-couple h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(43px, 6vw, 58px);
+  font-weight: 400;
+  line-height: 1.05;
+  color: #44372c;
+  margin: 0;
+}
+
+.invitation-couple span {
+  display: block;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  color: #a18b70;
+  margin: 12px 0;
+}
+
+/* DATE */
+
+.invitation-date {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  line-height: 2;
+  color: #776652;
+  margin-top: 35px;
+  padding: 12px 22px;
+  border-top: 1px solid #d9cfc2;
+  border-bottom: 1px solid #d9cfc2;
+}
+
+/* CLOSING */
+
+.invitation-closing {
+  max-width: 460px;
+  margin: 35px auto 0;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 2.1;
+  color: #71675d;
+}
+
+/* FOOTER */
+
+.invitation-footer {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #a18b70;
+  margin-top: 40px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 768px) {
+  .invitation-section {
+    padding: 70px 22px;
+  }
+
+  .invitation-container {
+    padding: 65px 35px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .invitation-section {
+    min-height: auto;
+    padding: 55px 15px;
+  }
+
+  .invitation-container {
+    padding: 48px 20px;
+  }
+
+  .invitation-bismillah {
+    font-size: 25px;
+    line-height: 1.8;
+  }
+
+  .invitation-bismillah-translation {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .invitation-ornament {
+    font-size: 17px;
+    margin: 25px 0;
+  }
+
+  .invitation-opening {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    line-height: 2;
+    margin-bottom: 25px;
+  }
+
+  .invitation-honorific {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+  }
+
+  .invitation-parents h3 {
+    font-size:17px;
+    line-height: 1.35;
+  }
+
+  .invitation-parents span {
+    font-size: 19px;
+    margin: 9px 0;
+  }
+
+  .invitation-request {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 30px;
+  }
+
+  .invitation-guest {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  .invitation-couple {
+    margin-top: 30px;
+  }
+
+  .invitation-couple h3 {
+    font-size: clamp(39px, 10vw, 47px);
+    line-height: 1.05;
+  }
+
+  .invitation-couple span {
+    font-size: 23px;
+    margin: 10px 0;
+  }
+
+  .invitation-date {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    margin-top: 28px;
+    padding: 11px 14px;
+  }
+
+  .invitation-closing {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 28px;
+  }
+
+  .invitation-footer {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 32px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 360px) {
+  .invitation-container {
+    padding: 40px 16px;
+  }
+
+  .invitation-opening {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .invitation-parents h3 {
+    font-size: 24px;
+  }
+
+  .invitation-guest {
+    font-size: 26px;
+  }
+
+  .invitation-couple h3 {
+    font-size: 37px;
+  }
+
+  .invitation-date {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+}

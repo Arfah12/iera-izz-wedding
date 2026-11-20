@@ -1,0 +1,143 @@
+
+.wishes-section {
+  width: 100%;
+  padding: 55px 20px 65px;
+  background: #faf9f6;
+  color: #171717;
+}
+
+.wishes-container {
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wishes-label {
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.wishes-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(34px, 6vw, 43px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.wishes-subtitle {
+  margin: 10px 0 22px;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  color: #777;
+}
+
+.wishes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.wishes-form input,
+.wishes-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d6d2cb;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: #171717;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.wishes-form input:focus,
+.wishes-form textarea:focus {
+  border-color: #171717;
+}
+
+.wishes-form textarea {
+  resize: vertical;
+  min-height: 65px;
+}
+
+.wishes-form button {
+  min-height: 42px;
+  padding: 12px;
+  border: 1px solid #171717;
+  background: #171717;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.wishes-form button:hover {
+  background: transparent;
+  color: #171717;
+}
+
+.wishes-form button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.wishes-feedback {
+  margin-top: 12px;
+  font-family: Georgia, serif;
+  font-size: 12px;
+}
+
+.wishes-divider {
+  width: 35px;
+  height: 1px;
+  background: #aaa69e;
+  margin: 30px auto 22px;
+}
+
+.wishes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wish-item {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e6e3dd;
+}
+
+.wish-text {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #444;
+  overflow-wrap: anywhere;
+}
+
+.wish-author {
+  margin-top: 7px;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.wishes-empty {
+  font-family: Georgia, serif;
+  font-size: 12px;
+  color: #888;
+}
+
+@media (max-width: 480px) {
+  .wishes-section {
+    padding: 42px 20px 50px;
+  }
+
+  .wishes-container {
+    max-width: 340px;
+  }
+}

@@ -1,0 +1,123 @@
+
+.rsvp-section {
+  width: 100%;
+  padding: 55px 20px;
+  background: #e8e6e1;
+  color: #171717;
+}
+
+.rsvp-box {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rsvp-label {
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.rsvp-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(34px, 6vw, 43px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.rsvp-subtitle {
+  margin: 10px 0 22px;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  color: #777;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rsvp-form input,
+.rsvp-form select {
+  width: 100%;
+  min-height: 43px;
+  padding: 11px 13px;
+  border: 1px solid #cbc8c1;
+  border-radius: 0;
+  outline: none;
+  background: #faf9f6;
+  color: #171717;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.rsvp-form input:focus,
+.rsvp-form select:focus {
+  border-color: #171717;
+}
+
+.rsvp-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.rsvp-options button {
+  min-height: 40px;
+  padding: 10px;
+  border: 1px solid #aaa69e;
+  background: transparent;
+  color: #333;
+  font-size: 10px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.rsvp-options button.selected {
+  background: #171717;
+  color: #fff;
+  border-color: #171717;
+}
+
+.rsvp-button {
+  min-height: 43px;
+  padding: 12px;
+  border: 1px solid #171717;
+  background: #171717;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.rsvp-button:hover {
+  background: transparent;
+  color: #171717;
+}
+
+.rsvp-button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.rsvp-message {
+  margin-top: 13px;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .rsvp-section {
+    padding: 42px 20px;
+  }
+
+  .rsvp-box {
+    max-width: 340px;
+  }
+}

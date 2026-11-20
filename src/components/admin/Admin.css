@@ -1,0 +1,546 @@
+
+/* =====================================
+   ADMIN ACCESS & DASHBOARD
+===================================== */
+
+.admin-access,
+.admin-dashboard {
+  min-height: 100vh;
+  background: #f7f5f1;
+  color: #302923;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+.admin-access *,
+.admin-dashboard * {
+  box-sizing: border-box;
+}
+
+/* =====================================
+   ADMIN LOGIN
+===================================== */
+
+.admin-access {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px 40px;
+  position: relative;
+}
+
+.admin-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #776b60;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.admin-back:hover {
+  color: #a47c70;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 58px 40px;
+  background: #fff;
+  border: 1px solid #e9e2d9;
+  box-shadow: 0 15px 50px rgba(64, 48, 35, 0.04);
+}
+
+.admin-lock-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 25px;
+  border: 1px solid #ded4c9;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #8d7161;
+}
+
+.admin-eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #a18f80;
+  text-transform: uppercase;
+}
+
+.admin-login-card h1,
+.admin-header h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+}
+
+.admin-login-card h1 {
+  font-size: 44px;
+  margin: 12px 0;
+  color: #493a30;
+}
+
+.admin-login-description {
+  font-size: 13px;
+  color: #93877d;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.admin-login-card input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #e5ddd4;
+  background: #faf9f7;
+  text-align: center;
+  letter-spacing: 8px;
+  font-size: 19px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.admin-login-card input:focus {
+  border-color: #a98b78;
+}
+
+.admin-primary-button {
+  width: 100%;
+  padding: 17px;
+  margin-top: 15px;
+  border: none;
+  background: #493a30;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-primary-button:hover {
+  background: #806657;
+}
+
+.admin-error {
+  color: #a33;
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.admin-login-footer {
+  margin-top: 35px;
+  color: #b0a69c;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* =====================================
+   DASHBOARD
+===================================== */
+
+.admin-dashboard {
+  padding: 55px max(5%, calc((100% - 1150px) / 2));
+}
+
+/* HEADER */
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e7dfd6;
+}
+
+.admin-header h1 {
+  font-size: 46px;
+  margin: 8px 0;
+  color: #493a30;
+}
+
+.admin-header p:last-child {
+  font-size: 12px;
+  color: #988c81;
+  margin-bottom: 0;
+}
+
+.admin-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 17px;
+  border: 1px solid #ded4ca;
+  background: #fff;
+  color: #756458;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.3s ease;
+}
+
+.admin-logout:hover {
+  background: #493a30;
+  color: #fff;
+  border-color: #493a30;
+}
+
+/* =====================================
+   STATISTICS
+===================================== */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.admin-stat-card {
+  background: #fff;
+  border: 1px solid #e9e2d9;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(64, 48, 35, 0.05);
+}
+
+.admin-stat-card span {
+  font-size: 10px;
+  color: #998b7f;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.admin-stat-card strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #594537;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.admin-content {
+  background: #fff;
+  border: 1px solid #e9e2d9;
+  box-shadow: 0 8px 30px rgba(64, 48, 35, 0.025);
+}
+
+/* TABS */
+
+.admin-tabs {
+  display: flex;
+  border-bottom: 1px solid #eee8e1;
+  background: #fcfbf9;
+}
+
+.admin-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 19px 26px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #a0968d;
+  cursor: pointer;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.admin-tabs button:hover {
+  color: #594537;
+}
+
+.admin-tabs button.active {
+  border-bottom-color: #8e6d5c;
+  color: #493a30;
+  background: #fff;
+}
+
+/* =====================================
+   LIST SECTION
+===================================== */
+
+.admin-list {
+  padding: 28px;
+}
+
+.admin-list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.admin-list-heading h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #493a30;
+  margin: 0;
+}
+
+.admin-list-heading button {
+  border: 1px solid #e1d8cf;
+  background: #fff;
+  color: #79685a;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+
+.admin-list-heading button:hover {
+  background: #493a30;
+  color: #fff;
+  border-color: #493a30;
+}
+
+/* =====================================
+   RECORDS
+===================================== */
+
+.admin-record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 8px;
+  border-bottom: 1px solid #f0ece7;
+  transition: background 0.2s ease;
+}
+
+.admin-record:last-child {
+  border-bottom: none;
+}
+
+.admin-record-info {
+  min-width: 0;
+}
+
+.admin-record-info h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #493f37;
+  margin: 0 0 7px;
+}
+
+.admin-record-info p {
+  font-size: 11px;
+  color: #9a9087;
+  line-height: 1.8;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.admin-record-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* STATUS */
+
+.status-present,
+.status-absent {
+  display: inline-flex;
+  align-items: center;
+  font-size: 10px;
+  padding: 7px 12px;
+  border-radius: 30px;
+  background: #edf2eb;
+  color: #65785e;
+  white-space: nowrap;
+}
+
+.status-absent {
+  background: #f6eeee;
+  color: #a16e6e;
+}
+
+/* DELETE */
+
+.admin-delete {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: #aaa098;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-delete:hover {
+  background: #f8eeee;
+  color: #a33;
+  border-color: #f0dede;
+}
+
+/* =====================================
+   EMPTY & LOADING
+===================================== */
+
+.admin-empty,
+.admin-loading {
+  text-align: center;
+  padding: 55px 15px;
+  color: #a69a8f;
+  font-size: 12px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+  .admin-dashboard {
+    padding: 40px 25px;
+  }
+
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-dashboard {
+    padding: 28px 15px;
+  }
+
+  .admin-header {
+    align-items: flex-start;
+    padding-bottom: 25px;
+  }
+
+  .admin-header h1 {
+    font-size: 36px;
+  }
+
+  .admin-header p:last-child {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .admin-logout {
+    padding: 10px;
+    font-size: 0;
+  }
+
+  .admin-stats {
+    gap: 10px;
+    margin: 22px 0;
+  }
+
+  .admin-stat-card {
+    padding: 17px;
+    gap: 10px;
+  }
+
+  .admin-stat-card span {
+    font-size: 9px;
+    letter-spacing: 0.5px;
+  }
+
+  .admin-stat-card strong {
+    font-size: 32px;
+  }
+
+  .admin-tabs button {
+    flex: 1;
+    padding: 15px 7px;
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .admin-list {
+    padding: 19px 15px;
+  }
+
+  .admin-list-heading {
+    margin-bottom: 15px;
+  }
+
+  .admin-list-heading h2 {
+    font-size: 25px;
+  }
+
+  .admin-list-heading button {
+    padding: 9px 11px;
+    font-size: 9px;
+  }
+
+  .admin-record {
+    align-items: flex-start;
+    gap: 10px;
+    padding: 17px 2px;
+  }
+
+  .admin-record-info h3 {
+    font-size: 12px;
+  }
+
+  .admin-record-info p {
+    font-size: 10px;
+  }
+
+  .admin-record-actions {
+    gap: 5px;
+  }
+
+  .status-present,
+  .status-absent {
+    font-size: 9px;
+    padding: 6px 9px;
+  }
+
+  .admin-delete {
+    width: 30px;
+    height: 30px;
+  }
+
+  .admin-login-card {
+    padding: 42px 23px;
+  }
+
+  .admin-login-card h1 {
+    font-size: 38px;
+  }
+
+  .admin-back {
+    left: 18px;
+    top: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .admin-record {
+    flex-direction: column;
+  }
+
+  .admin-record-actions {
+    align-self: flex-end;
+  }
+}
