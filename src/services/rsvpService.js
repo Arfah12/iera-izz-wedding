@@ -25,10 +25,17 @@ export async function submitRSVP(data) {
     throw new Error("Nama tidak sah.");
   }
 
+  // VALIDATE SIDE
+  if (!["Pihak Lelaki", "Pihak Perempuan"].includes(data.side)) {
+    throw new Error("Pilihan pihak tidak sah.");
+  }
+
+  // VALIDATE ATTENDANCE
   if (!["Hadir", "Tidak Hadir"].includes(data.attendance)) {
     throw new Error("Pilihan kehadiran tidak sah.");
   }
 
+  // VALIDATE GUESTS
   const guests = Number(data.guests);
 
   if (
@@ -42,6 +49,7 @@ export async function submitRSVP(data) {
   return addDoc(rsvpCollection, {
     weddingId,
     name: cleanName,
+    side: data.side,
     attendance: data.attendance,
     guests,
     createdAt: serverTimestamp(),

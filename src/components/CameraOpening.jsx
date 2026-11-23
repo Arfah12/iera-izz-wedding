@@ -52,7 +52,7 @@ export default function CameraOpening({ couplePhoto, onStartExperience }) {
         </p>
 
         <h1 className="camera-title">
-          Before the <em>forever</em> begins.
+          Before the <em>forever</em> begins
         </h1>
 
         <div
@@ -114,7 +114,7 @@ export default function CameraOpening({ couplePhoto, onStartExperience }) {
             <img src={couplePhoto} alt="The couple" />
           </div>
 
-          <p>Our beautiful beginning.</p>
+          <p>Our beautiful beginning</p>
         </div>
 
         {/* INSTRUCTION */}

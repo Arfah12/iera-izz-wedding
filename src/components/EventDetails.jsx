@@ -34,20 +34,19 @@ export default function EventDetails() {
 
           <span className="event-number">01</span>
 
-          <p className="event-day">{event.day}</p>
+        
 
           <h3 className="event-title">{event.title}</h3>
           <p className="event-title-en">
-            Marriage Solemnisation Ceremony
+            Wedding Solemnisation Ceremony
           </p>
 
           <div className="event-divider" />
 
           <div className="event-info">
-
             <div className="event-info-item">
-              <span className="event-info-label">DATE</span>
-              <p>{event.date}</p>
+              <span className="event-info-label">DAY & DATE</span>
+              <p>{event.day}, {event.date}</p>
             </div>
 
             <div className="event-info-item">
@@ -87,10 +86,10 @@ export default function EventDetails() {
           </h3>
 
           <p>
-            Atur cara majlis pada hari istimewa kami.
+            Atur Cara Majlis Pada Hari Istimewa Kami
             <br />
             <span>
-              Schedule of events on our special day.
+              Schedule of Events for Our Special Day.
             </span>
           </p>
         </div>
@@ -137,7 +136,7 @@ export default function EventDetails() {
         <div className="contact-group">
 
           <h4 className="contact-group-title">
-            Pihak Perempuan
+            Pihak Pengantin Perempuan
             <span>Bride's Family</span>
           </h4>
 
@@ -174,7 +173,7 @@ export default function EventDetails() {
         <div className="contact-group">
 
           <h4 className="contact-group-title">
-            Pihak Lelaki
+            Pihak Pengantin Lelaki
             <span>Groom's Family</span>
           </h4>
 

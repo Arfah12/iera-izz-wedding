@@ -22,7 +22,7 @@ export default function Invitation() {
         <div className="invitation-ornament">✦</div>
 
         {/* Opening Malay */}
-        <p className="invitation-opening">
+        <p className="invitation-request">
           Dengan nama Allah Yang Maha Pemurah lagi Maha Penyayang,
           kami
         </p>
@@ -31,14 +31,17 @@ export default function Invitation() {
         <p className="invitation-english">
           In the name of Allah, the Most Gracious and the Most Merciful, we
         </p>
+        <p className="invitation-arabic-greeting-1">
+PIHAK PEREMPUAN
+</p>
 
         {/* Bride's Parents */}
         <div className="invitation-parents">
           <h3>{weddingData.parentsBride}</h3>
         </div>
-
-        <div className="invitation-ornament">&</div>
-
+     <p className="invitation-arabic-greeting-1">
+PIHAK LELAKI
+</p>
         {/* Groom's Parents */}
         <div className="invitation-parents">
           <h3>{weddingData.parentsGroom}</h3>
@@ -79,12 +82,19 @@ export default function Invitation() {
 
         {/* Closing */}
         <p className="invitation-closing">
-          Kehadiran dan doa restu daripada pihak tuan/puan
-          amatlah kami hargai.
+          Kehadiran serta doa restu daripada tuan/puan amatlah kami hargai
+        </p>
+
+                <p className="invitation-english">
+           Your presence and blessings would mean so much to us
         </p>
 
         <p className="invitation-footer">
           TERIMA KASIH
+        </p>
+
+         <p className="invitation-english">
+          THANK YOU
         </p>
 
       </div>

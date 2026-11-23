@@ -46,11 +46,11 @@ export default function Countdown() {
         <h2 className="countdown-title">
           Counting Down
           <br />
-          To Forever
+          To Our Forever
         </h2>
 
         <p className="countdown-subtitle">
-          Every second brings us closer to our special day.
+          Every moment bring us closer to the beginning of our forever
         </p>
 
         {timeLeft ? (

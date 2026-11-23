@@ -320,6 +320,14 @@
   direction: rtl;
 }
 
+.invitation-arabic-greeting-1 {
+  font-family: "Amiri", "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 2;
+  color: #294765;
+  margin: 25px 0;
+  direction: rtl;
+}
 .invitation-english {
   font-family: Georgia, serif;
   font-size: 13px;

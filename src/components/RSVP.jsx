@@ -5,6 +5,7 @@ import "./RSVP.css";
 
 export default function RSVP() {
   const [name, setName] = useState("");
+  const [side, setSide] = useState("Pihak Lelaki");
   const [attendance, setAttendance] = useState("Hadir");
   const [guests, setGuests] = useState("1");
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,7 @@ export default function RSVP() {
     try {
       await submitRSVP({
         name: name.trim(),
+        side,
         attendance,
         guests: attendance === "Hadir" ? Number(guests) : 0,
       });
@@ -31,6 +33,7 @@ export default function RSVP() {
       setMessage("Terima kasih! Pengesahan anda telah diterima.");
 
       setName("");
+      setSide("Pihak Lelaki");
       setAttendance("Hadir");
       setGuests("1");
 
@@ -45,17 +48,19 @@ export default function RSVP() {
   return (
     <section className="rsvp-section">
       <div className="rsvp-box">
-        <p className="rsvp-label">KINDLY RESPOND</p>
 
         <h2 className="rsvp-heading">
           Will You Join Us?
         </h2>
 
         <p className="rsvp-subtitle">
-          Mohon sahkan kehadiran anda.
+          RSVP DEADLINE - 8 January 2027
+          Kindly respond by this date. Thank you for your cooperation.
         </p>
 
         <form onSubmit={handleSubmit} className="rsvp-form">
+
+          {/* NAME */}
           <input
             type="text"
             placeholder="Nama penuh"
@@ -65,13 +70,37 @@ export default function RSVP() {
             required
           />
 
+          {/* BRIDE / GROOM SIDE */}
+          <div className="rsvp-side">
+          
+
+            <div className="rsvp-options">
+              <button
+                type="button"
+                className={side === "Pihak Lelaki" ? "selected" : ""}
+                onClick={() => setSide("Pihak Lelaki")}
+              >
+                Pihak Lelaki / Groom Family 
+              </button>
+
+              <button
+                type="button"
+                className={side === "Pihak Perempuan" ? "selected" : ""}
+                onClick={() => setSide("Pihak Perempuan")}
+              >
+                Pihak Perempuan / Bride Family
+              </button>
+            </div>
+          </div>
+
+          {/* ATTENDANCE */}
           <div className="rsvp-options">
             <button
               type="button"
               className={attendance === "Hadir" ? "selected" : ""}
               onClick={() => setAttendance("Hadir")}
             >
-              Hadir
+              Hadir / Attending
             </button>
 
             <button
@@ -79,10 +108,11 @@ export default function RSVP() {
               className={attendance === "Tidak Hadir" ? "selected" : ""}
               onClick={() => setAttendance("Tidak Hadir")}
             >
-              Tidak Hadir
+              Tidak Hadir / Unable to Attend
             </button>
           </div>
 
+          {/* NUMBER OF GUESTS */}
           {attendance === "Hadir" && (
             <select
               value={guests}
@@ -97,13 +127,15 @@ export default function RSVP() {
             </select>
           )}
 
+          {/* SUBMIT */}
           <button
             type="submit"
             className="rsvp-button"
             disabled={loading}
           >
-            {loading ? "SEDANG MENGHANTAR..." : "HANTAR RSVP"}
+            {loading ? "SEDANG MENGHANTAR..." : "SUBMIT RSVP"}
           </button>
+
         </form>
 
         {message && (
@@ -111,6 +143,7 @@ export default function RSVP() {
             {message}
           </p>
         )}
+
       </div>
     </section>
   );

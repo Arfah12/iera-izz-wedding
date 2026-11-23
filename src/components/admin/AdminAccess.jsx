@@ -135,10 +135,6 @@ export default function AdminAccess({ onBack, onSuccess }) {
 
         </form>
 
-        <p className="admin-login-footer">
-          AINA & HAKIM · 12 JUNE 2027
-        </p>
-
       </div>
     </section>
   );

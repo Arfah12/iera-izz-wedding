@@ -1,6 +1,13 @@
 
 import { useEffect, useState } from "react";
-import { LogOut, Users, MessageCircle, Trash2 } from "lucide-react";
+import {
+  LogOut,
+  Users,
+  MessageCircle,
+  Trash2,
+  UserRound,
+  UserRoundCheck,
+} from "lucide-react";
 
 import { getRSVPs, deleteRSVP } from "../../services/rsvpService";
 import { getAllWishes, deleteWish } from "../../services/wishesService";
@@ -19,7 +26,7 @@ export default function AdminDashboard({ onLogout }) {
   const [rsvpError, setRsvpError] = useState("");
   const [wishesError, setWishesError] = useState("");
 
-  // LOAD RSVP SEPARATELY
+  // LOAD RSVP
   const loadRSVPs = async () => {
     setRsvpLoading(true);
     setRsvpError("");
@@ -29,7 +36,6 @@ export default function AdminDashboard({ onLogout }) {
       setRsvps(data);
     } catch (error) {
       console.error("RSVP loading error:", error);
-
       setRsvpError(
         "Admin belum mempunyai permission untuk membaca RSVP."
       );
@@ -38,7 +44,7 @@ export default function AdminDashboard({ onLogout }) {
     }
   };
 
-  // LOAD WISHES SEPARATELY
+  // LOAD WISHES
   const loadWishes = async () => {
     setWishesLoading(true);
     setWishesError("");
@@ -59,7 +65,6 @@ export default function AdminDashboard({ onLogout }) {
     }
   };
 
-  // LOAD BOTH WITHOUT BLOCKING EACH OTHER
   const loadData = () => {
     loadRSVPs();
     loadWishes();
@@ -101,6 +106,7 @@ export default function AdminDashboard({ onLogout }) {
     }
   };
 
+  // GENERAL RSVP STATISTICS
   const attending = rsvps.filter(
     (item) => item.attendance === "Hadir"
   );
@@ -114,6 +120,48 @@ export default function AdminDashboard({ onLogout }) {
     0
   );
 
+  // GROOM SIDE
+  const maleSide = rsvps.filter(
+    (item) => item.side === "Pihak Lelaki"
+  );
+
+  const maleAttending = maleSide.filter(
+    (item) => item.attendance === "Hadir"
+  );
+
+  const maleNotAttending = maleSide.filter(
+    (item) => item.attendance === "Tidak Hadir"
+  );
+
+  const maleGuests = maleAttending.reduce(
+    (total, item) => total + Number(item.guests || 0),
+    0
+  );
+
+  // BRIDE SIDE
+  const femaleSide = rsvps.filter(
+    (item) => item.side === "Pihak Perempuan"
+  );
+
+  const femaleAttending = femaleSide.filter(
+    (item) => item.attendance === "Hadir"
+  );
+
+  const femaleNotAttending = femaleSide.filter(
+    (item) => item.attendance === "Tidak Hadir"
+  );
+
+  const femaleGuests = femaleAttending.reduce(
+    (total, item) => total + Number(item.guests || 0),
+    0
+  );
+
+  // UNASSIGNED OLD RSVP
+  const unassignedSide = rsvps.filter(
+    (item) =>
+      !["Pihak Lelaki", "Pihak Perempuan"].includes(item.side)
+  );
+
   const handleLogout = () => {
     sessionStorage.removeItem("weddingAdminAccess");
     onLogout();
@@ -122,11 +170,11 @@ export default function AdminDashboard({ onLogout }) {
   return (
     <section className="admin-dashboard">
 
+      {/* HEADER */}
       <header className="admin-header">
         <div>
           <p className="admin-eyebrow">WEDDING MANAGEMENT</p>
           <h1>Guestbook Dashboard</h1>
-          <p>Aina & Hakim · 12 June 2027</p>
         </div>
 
         <button className="admin-logout" onClick={handleLogout}>
@@ -135,7 +183,7 @@ export default function AdminDashboard({ onLogout }) {
         </button>
       </header>
 
-      {/* STATISTICS */}
+      {/* GENERAL STATISTICS */}
       <div className="admin-stats">
 
         <div className="admin-stat-card">
@@ -166,6 +214,96 @@ export default function AdminDashboard({ onLogout }) {
             {rsvpLoading ? "..." : rsvpError ? "—" : totalGuests}
           </strong>
         </div>
+
+      </div>
+
+      {/* SIDE STATISTICS */}
+      <div className="admin-side-section">
+
+        <div className="admin-side-heading">
+    
+          <p>RSVP breakdown by family side</p>
+        </div>
+
+        <div className="admin-side-grid">
+
+          {/* GROOM SIDE */}
+          <div className="admin-side-card">
+            <div className="admin-side-card-header">
+              <div className="admin-side-icon male">
+                <UserRound size={20} />
+              </div>
+
+              <div>
+                <h3>Pihak Lelaki</h3>
+                <p>Groom's Family</p>
+              </div>
+            </div>
+
+            <div className="admin-side-main">
+              <div>
+                <span>Jumlah RSVP</span>
+                <strong>
+                  {rsvpLoading ? "..." : rsvpError ? "—" : maleSide.length}
+                </strong>
+              </div>
+
+              <div>
+                <span>Jumlah Pax</span>
+                <strong>
+                  {rsvpLoading ? "..." : rsvpError ? "—" : maleGuests}
+                </strong>
+              </div>
+            </div>
+
+            <div className="admin-side-details">
+              <span>Hadir: {maleAttending.length}</span>
+              <span>Tidak Hadir: {maleNotAttending.length}</span>
+            </div>
+          </div>
+
+          {/* BRIDE SIDE */}
+          <div className="admin-side-card">
+            <div className="admin-side-card-header">
+              <div className="admin-side-icon female">
+                <UserRoundCheck size={20} />
+              </div>
+
+              <div>
+                <h3>Pihak Perempuan</h3>
+                <p>Bride's Family</p>
+              </div>
+            </div>
+
+            <div className="admin-side-main">
+              <div>
+                <span>Jumlah RSVP</span>
+                <strong>
+                  {rsvpLoading ? "..." : rsvpError ? "—" : femaleSide.length}
+                </strong>
+              </div>
+
+              <div>
+                <span>Jumlah Pax</span>
+                <strong>
+                  {rsvpLoading ? "..." : rsvpError ? "—" : femaleGuests}
+                </strong>
+              </div>
+            </div>
+
+            <div className="admin-side-details">
+              <span>Hadir: {femaleAttending.length}</span>
+              <span>Tidak Hadir: {femaleNotAttending.length}</span>
+            </div>
+          </div>
+
+        </div>
+
+        {!rsvpLoading && !rsvpError && unassignedSide.length > 0 && (
+          <p className="admin-unassigned">
+            {unassignedSide.length} RSVP lama belum mempunyai pilihan pihak.
+          </p>
+        )}
 
       </div>
 
@@ -213,8 +351,13 @@ export default function AdminDashboard({ onLogout }) {
 
                   <div className="admin-record-info">
                     <h3>{item.name}</h3>
+
                     <p>
-                      {item.attendance} · {item.guests || 0} pax
+                      {item.side || "Belum ditetapkan"}
+                      {" · "}
+                      {item.attendance}
+                      {" · "}
+                      {item.guests || 0} pax
                     </p>
                   </div>
 

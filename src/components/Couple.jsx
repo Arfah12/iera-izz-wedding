@@ -66,13 +66,13 @@ export default function Couple() {
         </p>
 
         <h2 className="couple-title">
-          The People
+          The Story
           <br />
-          Behind The Story
+           of Us
         </h2>
 
         <p className="couple-subtitle">
-          A beautiful journey that brings two souls together.
+          Two Souls, One Beautiful Journey, and A Lifetime of Love
         </p>
       </div>
 
@@ -124,7 +124,7 @@ export default function Couple() {
           <h3>
             Together
             <br />
-            Forever.
+            Forever
           </h3>
         </div>
       </div>
@@ -138,7 +138,7 @@ export default function Couple() {
               <p>CAPTURED MOMENTS</p>
 
               <h3>
-                Little Moments, <i>Forever Memories.</i>
+                Little Moments, <i>Forever Memories</i>
               </h3>
             </div>
 
@@ -186,7 +186,7 @@ export default function Couple() {
           </div>
 
           <p className="gallery-hint">
-            SWIPE TO EXPLORE OUR MEMORIES →
+            SWIPE TO EXPLORE OUR MEMORIES 
           </p>
 
         </div>
@@ -195,7 +195,7 @@ export default function Couple() {
       {/* FOOTER */}
       <div className="couple-bottom">
         <span>WARKAHKASIH</span>
-        <span>EST. 2027</span>
+        <span>EST. 2026</span>
       </div>
 
     </section>

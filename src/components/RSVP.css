@@ -7,6 +7,23 @@
   box-sizing: border-box;
 }
 
+.rsvp-side {
+  width: 100%;
+  text-align: left;
+}
+
+.rsvp-side label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: inherit;
+}
+
+.rsvp-side .rsvp-options {
+  margin-bottom: 0;
+}
+
 .rsvp-box {
   width: 100%;
   max-width: 480px;

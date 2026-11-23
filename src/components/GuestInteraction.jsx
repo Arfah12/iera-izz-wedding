@@ -33,9 +33,7 @@ export default function GuestInteraction() {
           </h2>
 
           <p className="guest-description">
-            We would love to hear from you.
-            Kindly let us know if you can join us
-            and leave a little message for the couple.
+            We would be delighted to celebrate this special day with you. Kindly confirm your attendance by 8 January 2027 and leave us a heartfelt message
           </p>
 
           <div className="guest-buttons">
