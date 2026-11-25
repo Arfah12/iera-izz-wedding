@@ -62,7 +62,7 @@ PIHAK LELAKI
         </p>
 
         <p className="invitation-english">
-          to join us in celebrating the wedding of:
+          To join us in celebrating the wedding of:
         </p>
 
         {/* Couple Names */}
