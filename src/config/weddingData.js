@@ -34,7 +34,7 @@ weddingDateDisplay: "29 JANUARY 2027",
     time: "6:15 PM", // وفق جدول Atur Cara Majlis: Majlis Akad Nikah الساعة 6:15 PM
     venue: "Camelia Event Space Ampang",
     address: "Level 1, Fiesta Mall @ Axis Pandan, Jalan Cempaka, Taman Cempaka, 68000 Ampang, Selangor",
-    mapsUrl: "https://maps.google.com/",
+    mapsUrl: "https://maps.app.goo.gl/pG6M2gWXVRqkEjAb6",
     wazeUrl: "https://waze.com/ul",
   },
 
