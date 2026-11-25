@@ -111,7 +111,7 @@ export default function CameraOpening({ couplePhoto, onStartExperience }) {
           }`}
         >
           <div className="polaroid-image">
-            <img src={couplePhoto} alt="The couple" />
+            <img src={polaroidPhoto1} alt="The couple" />
           </div>
 
           <p>Our beautiful beginning</p>
