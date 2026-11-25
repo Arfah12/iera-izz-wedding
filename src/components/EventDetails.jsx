@@ -136,24 +136,24 @@ export default function EventDetails() {
     </span>
   </p>
 
-  <div className="dresscode-palette">
+<div className="dresscode-palette">
 
-    {[
-      { color: "#DCE6F0", name: "Powder Blue" },
-      { color: "#A9BDD2", name: "Dusty Blue" },
-      { color: "#718DAA", name: "Steel Blue" },
-      { color: "#405B78", name: "Navy Blue" }
-    ].map((item) => (
-      <div className="palette-item" key={item.name}>
-        <div
-          className="palette-swatch"
-          style={{ backgroundColor: item.color }}
-        />
-        <small>{item.name}</small>
-      </div>
-    ))}
+  {[
+    { color: "#ADE1FB", name: "Sky Blue" },
+    { color: "#266CA9", name: "Ocean Blue" },
+    { color: "#041D56", name: "Midnight Blue" },
+    { color: "#01082D", name: "Deep Navy" }
+  ].map((item) => (
+    <div className="palette-item" key={item.name}>
+      <div
+        className="palette-swatch"
+        style={{ backgroundColor: item.color }}
+      />
+      <small>{item.name}</small>
+    </div>
+  ))}
 
-  </div>
+</div>
 
   <p className="dresscode-footer">
     WITH LOVE & APPRECIATION
