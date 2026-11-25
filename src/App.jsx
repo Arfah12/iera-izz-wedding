@@ -15,6 +15,7 @@ import EventDetails from "./components/EventDetails";
 import GuestInteraction from "./components/GuestInteraction";
 import WishesWall from "./components/WishesWall";
 import Closing from "./components/Closing";
+import { weddingData } from "./config/weddingData";
 
 // Admin
 import AdminAccess from "./components/admin/AdminAccess";
@@ -337,7 +338,7 @@ export default function App() {
     <>
       {!experienceStarted && (
         <CameraOpening
-          couplePhoto="/assets/couple/couple-portrait.jpg"
+          couplePhoto={weddingData.polaroidPhoto1}
           onStartExperience={handleStartExperience}
         />
       )}

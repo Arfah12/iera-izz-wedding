@@ -20,7 +20,7 @@ weddingDateDisplay: "29 JANUARY 2027",
   galleryPhoto1: "/assets/couple/memory-1.jpg",
   galleryPhoto2: "/assets/couple/memory-2.jpg",
   galleryPhoto3: "/assets/couple/memory-3.jpg",
-  polaroidPhoto1: "/assets/couple/couple-potrait1.jpg",
+  polaroidPhoto1: "/assets/couple/couple-portrait.jpg",
 
   // Invitation
   invitationText:
