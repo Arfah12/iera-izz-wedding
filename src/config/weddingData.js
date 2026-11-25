@@ -7,7 +7,7 @@ export const weddingData = {
 brideNameShort: "Iera",
   groomNameShort: "Izz",
   parentsBride: "Mohamad Nizam bin Abdullah & Azean binti Ahmad",
-  parentsGroom: "NASZIATHUL NADIA BINTI A ANUAR & AHMAD SAIFUL BIN SHAHARIL", // لم يُذكر والدا العريس في النص أو الصور الجديدة
+  parentsGroom: "AHMAD SAIFUL BIN SHAHARIL & NASZIATHUL NADIA BINTI A ANUAR  ", // لم يُذكر والدا العريس في النص أو الصور الجديدة
 
   // Wedding Date
 weddingDate: "2027-01-29T00:00:00+08:00",
@@ -71,25 +71,25 @@ contacts: [
     title: "Wakil Pihak Perempuan 1",
     titleEn: "Bride's Family Representative 1",
     name: "Zam",
-    phone: "+6013 606 1005",
+    phone: "+60136061005",
   },
   {
     title: "Wakil Pihak Perempuan 2",
     titleEn: "Bride's Family Representative 2",
     name: "Yan",
-    phone: "+6012 511 7371",
+    phone: "+60125117371",
   },
   {
     title: "Wakil Pihak Lelaki 1",
     titleEn: "Groom's Family Representative 1",
     name: "Nadia",
-    phone: "+6010 258 9360",
+    phone: "+60102589360",
   },
   {
     title: "Wakil Pihak Lelaki 2",
     titleEn: "Groom's Family Representative 2",
     name: "Siti",
-    phone: "+6013 346 7368",
+    phone: "+60133467368",
   },
 ],
 
