@@ -338,7 +338,7 @@ export default function App() {
     <>
       {!experienceStarted && (
         <CameraOpening
-          couplePhoto={weddingData.polaroidPhoto1}
+          polaroidPhoto1={weddingData.polaroidPhoto1}
           onStartExperience={handleStartExperience}
         />
       )}

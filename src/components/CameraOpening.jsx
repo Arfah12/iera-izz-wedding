@@ -3,7 +3,7 @@ import { useState } from "react";
 import { startBackgroundMusic } from "../services/backgroundMusic";
 import "./CameraOpening.css";
 
-export default function CameraOpening({ couplePhoto, onStartExperience }) {
+export default function CameraOpening({ polaroidPhoto1, onStartExperience }) {
   const [captured, setCaptured] = useState(false);
   const [showPhoto, setShowPhoto] = useState(false);
   const [finished, setFinished] = useState(false);
@@ -111,7 +111,7 @@ export default function CameraOpening({ couplePhoto, onStartExperience }) {
           }`}
         >
           <div className="polaroid-image">
-            <img src={couplePhoto} alt="The couple" />
+            <img src={polaroidPhoto1} alt="The couple" />
           </div>
 
           <p>Our beautiful beginning</p>
