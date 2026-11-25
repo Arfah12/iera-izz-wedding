@@ -8,17 +8,20 @@ export default function Wishes({ onSuccess }) {
   const [wish, setWish] = useState("");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!name.trim() || !wish.trim()) {
+      setSuccess(false);
       setMessage("Sila lengkapkan nama dan ucapan.");
       return;
     }
 
     setLoading(true);
     setMessage("");
+    setSuccess(false);
 
     try {
       await addWish({
@@ -29,12 +32,15 @@ export default function Wishes({ onSuccess }) {
       setName("");
       setWish("");
 
-      // Tutup modal selepas ucapan berjaya dihantar
-      onSuccess?.();
+      setSuccess(true);
+      setMessage("Terima kasih! Ucapan anda telah diterima.");
 
     } catch (error) {
       console.error("Wish error:", error);
+
+      setSuccess(false);
       setMessage("Ucapan tidak berjaya dihantar. Cuba lagi.");
+
     } finally {
       setLoading(false);
     }
@@ -44,7 +50,9 @@ export default function Wishes({ onSuccess }) {
     <section className="wishes-section">
       <div className="wishes-container">
 
-        <p className="wishes-label">A LITTLE NOTE FOR US</p>
+        <p className="wishes-label">
+          A LITTLE NOTE FOR US
+        </p>
 
         <h2 className="wishes-heading">
           Leave A Little Wish
@@ -55,6 +63,7 @@ export default function Wishes({ onSuccess }) {
         </p>
 
         <form className="wishes-form" onSubmit={handleSubmit}>
+
           <input
             type="text"
             placeholder="Nama anda"
@@ -62,6 +71,7 @@ export default function Wishes({ onSuccess }) {
             onChange={(e) => setName(e.target.value)}
             maxLength={60}
             required
+            disabled={loading}
           />
 
           <textarea
@@ -71,15 +81,20 @@ export default function Wishes({ onSuccess }) {
             maxLength={300}
             rows={3}
             required
+            disabled={loading}
           />
 
           <button type="submit" disabled={loading}>
             {loading ? "SENDING..." : "SEND WISH"}
           </button>
+
         </form>
 
         {message && (
-          <p className="wishes-feedback" role="status">
+          <p
+            className={`wishes-feedback ${success ? "success" : "error"}`}
+            role="status"
+          >
             {message}
           </p>
         )}
