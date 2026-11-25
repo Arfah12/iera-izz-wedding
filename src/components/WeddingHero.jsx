@@ -52,7 +52,7 @@ export default function WeddingHero() {
       <div className="hero-bottom">
         <span>WARKAHKASIH</span>
         <span>SCROLL TO DISCOVER ↓</span>
-        <span>2027</span>
+        <span>2026</span>
       </div>
 
     </section>

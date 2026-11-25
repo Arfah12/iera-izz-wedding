@@ -13,7 +13,7 @@ export default function Closing({ onManageGuestbook }) {
         <h2 className="closing-title">
           Until We Meet
           <br />
-          <i>Again.</i>
+          <i>Again</i>
         </h2>
 
         <div className="closing-divider">✦</div>
@@ -40,7 +40,7 @@ export default function Closing({ onManageGuestbook }) {
         </button>
 
         <p className="closing-footer">
-          WARKAHKASIH · 2027
+          WARKAHKASIH · 2026
         </p>
       </div>
     </section>
