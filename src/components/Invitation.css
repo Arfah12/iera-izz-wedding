@@ -122,7 +122,7 @@
 
 .invitation-couple h3 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(15px, 6vw, 14px);
+  font-size: clamp(12px, 6vw, 10px);
   font-weight: 400;
   line-height: 1.05;
   color: #233f5d;
@@ -133,7 +133,7 @@
   display: block;
   font-family: Georgia, serif;
   font-style: italic;
-  font-size: 15px;
+  font-size: 14px;
   color: #789bbd;
   margin: 12px 0;
 }
@@ -252,12 +252,12 @@
   }
 
   .invitation-couple h3 {
-    font-size: clamp(20px, 10vw, 14px);
+    font-size: clamp(15px, 10vw, 14px);
     line-height: 1.05;
   }
 
   .invitation-couple span {
-    font-size: 15px;
+    font-size: 14px;
     margin: 10px 0;
   }
 
