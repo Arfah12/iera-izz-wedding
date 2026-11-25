@@ -53,16 +53,16 @@ PIHAK LELAKI
         </p>
 
         <p className="invitation-english">
-          With grateful hearts, invite Sir/Madam/Mr/Ms
+          With gratitude to the Almighty, we cordially invite you 
         </p>
 
         {/* Marriage Ceremony */}
         <p className="invitation-request">
-          Untuk meraikan majlis pernikahan puteri kesayangan kami
+          Untuk meraikan majlis pernikahan:
         </p>
 
         <p className="invitation-english">
-          To celebrate the solemnisation of our beloved daughter's marriage
+          to join us in celebrating the wedding of:
         </p>
 
         {/* Couple Names */}
