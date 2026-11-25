@@ -112,9 +112,46 @@ export default function EventDetails() {
               </div>
 
             </div>
+
+            
           ))}
         </div>
+{/* DRESS CODE */}
+<div className="event-dresscode">
 
+  <p className="event-eyebrow">DRESS CODE</p>
+
+  <h3>
+    Dress to <em>Celebrate</em>
+  </h3>
+
+  <p className="dresscode-description">
+    Kami amat mengalu-alukan tetamu untuk mengenakan
+    pakaian mengikut tema warna yang ditetapkan.
+    <br />
+    <span>
+      Guests are welcome to dress according to our selected colour theme.
+    </span>
+  </p>
+
+  <div className="dresscode-colors">
+    <div className="dresscode-color">
+      <span style={{ backgroundColor: "#b9d3fa" }} />
+      <small>Beige</small>
+    </div>
+
+    <div className="dresscode-color">
+      <span style={{ backgroundColor: "#80cef3" }} />
+      <small>Cream</small>
+    </div>
+
+    <div className="dresscode-color">
+      <span style={{ backgroundColor: "#1e47ae" }} />
+      <small>Mocha</small>
+    </div>
+  </div>
+
+</div>
       </div>
 
       {/* CONTACT */}

@@ -604,3 +604,58 @@
   color: #8da3bb;
   line-height: 1.5;
 }
+/* DRESS CODE */
+
+.event-dresscode {
+  text-align: center;
+  padding: 65px 20px;
+  margin: 40px auto;
+}
+
+.event-dresscode h3 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.event-dresscode h3 em {
+  font-family: serif;
+  font-style: italic;
+}
+
+.dresscode-description {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.dresscode-description span {
+  font-style: italic;
+}
+
+.dresscode-colors {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+
+.dresscode-color {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.dresscode-color span {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.dresscode-color small {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #777;
+}
