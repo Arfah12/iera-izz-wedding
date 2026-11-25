@@ -57,7 +57,7 @@ export default function WishesWall() {
           <p>HEARTFELT WORDS FROM OUR GUESTS</p>
 
           <h2>
-            Little Notes, <i>Big Love.</i>
+            Little Notes, <i>Big Love</i>
           </h2>
 
           <span>

@@ -35,7 +35,7 @@ weddingDateDisplay: "29 JANUARY 2027",
     venue: "Camelia Event Space Ampang",
     address: "Level 1, Fiesta Mall @ Axis Pandan, Jalan Cempaka, Taman Cempaka, 68000 Ampang, Selangor",
     mapsUrl: "https://maps.app.goo.gl/pG6M2gWXVRqkEjAb6",
-    wazeUrl: "https://waze.com/ul",
+    wazeUrl: "https://maps.app.goo.gl/pG6M2gWXVRqkEjAb6",
   },
 
   // Reception / Evening Programme

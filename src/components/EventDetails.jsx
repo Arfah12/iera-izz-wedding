@@ -23,7 +23,7 @@ export default function EventDetails() {
           <br />
           <span>
             With grateful hearts, we warmly invite you
-            and your family to celebrate our special day.
+            and your family to celebrate our special day
           </span>
         </p>
       </div>
@@ -65,7 +65,7 @@ export default function EventDetails() {
           <div className="event-buttons">
             <a
               href={event.mapsUrl}
-              target="_blank"
+              target="https://share.google/axpuJD0WTyfLzkylU"
               rel="noopener noreferrer"
             >
               VIEW LOCATION
@@ -132,7 +132,7 @@ export default function EventDetails() {
     dalam pilihan tona warna biru.
     <br />
     <span>
-      Guests are welcome to wear shades of blue.
+      Guests are invited to dress in shades of blue.
     </span>
   </p>
 
