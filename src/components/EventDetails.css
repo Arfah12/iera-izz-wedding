@@ -605,57 +605,91 @@
   line-height: 1.5;
 }
 /* DRESS CODE */
-
-.event-dresscode {
-  text-align: center;
-  padding: 65px 20px;
+.blue-theme {
+  background: #F5F7FA;
+  padding: 55px 25px;
+  max-width: 750px;
   margin: 40px auto;
+  text-align: center;
 }
 
-.event-dresscode h3 {
-  font-size: 32px;
+.blue-theme .event-eyebrow {
+  color: #718DAA;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.blue-theme h3 {
+  color: #354D69;
+  font-size: 34px;
   font-weight: 400;
-  margin: 12px 0;
+  margin: 12px 0 5px;
 }
 
-.event-dresscode h3 em {
+.blue-theme h3 em {
   font-family: serif;
   font-style: italic;
 }
 
-.dresscode-description {
-  font-size: 13px;
-  line-height: 1.8;
-  color: #777;
+.dresscode-highlight {
+  color: #7891AC;
+  font-family: serif;
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.blue-theme .dresscode-description {
+  color: #69798B;
+  font-size: 12px;
+  line-height: 1.9;
   margin-bottom: 30px;
 }
 
-.dresscode-description span {
-  font-style: italic;
+.dresscode-palette {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 430px;
+  margin: auto;
 }
 
-.dresscode-colors {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-}
-
-.dresscode-color {
+.palette-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.dresscode-color span {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  border: 1px solid #ddd;
+.palette-swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid #D6DDE5;
+  border-radius: 5px;
 }
 
-.dresscode-color small {
-  font-size: 11px;
-  letter-spacing: 1px;
-  color: #777;
+.palette-item small {
+  font-size: 10px;
+  color: #52677E;
+}
+
+.dresscode-footer {
+  color: #8291A2;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 35px;
+}
+
+@media (max-width: 480px) {
+  .blue-theme {
+    padding: 45px 18px;
+  }
+
+  .dresscode-palette {
+    gap: 10px;
+  }
+
+  .palette-item small {
+    font-size: 9px;
+  }
 }

@@ -117,39 +117,47 @@ export default function EventDetails() {
           ))}
         </div>
 {/* DRESS CODE */}
-<div className="event-dresscode">
+<div className="event-dresscode blue-theme">
 
-  <p className="event-eyebrow">DRESS CODE</p>
+  <p className="event-eyebrow">A LITTLE STYLE GUIDE</p>
 
   <h3>
-    Dress to <em>Celebrate</em>
+    Dress <em>Code</em>
   </h3>
 
+  <p className="dresscode-highlight">Something in Blue</p>
+
   <p className="dresscode-description">
-    Kami amat mengalu-alukan tetamu untuk mengenakan
-    pakaian mengikut tema warna yang ditetapkan.
+    Kami menjemput tetamu untuk mengenakan pakaian
+    dalam pilihan tona warna biru.
     <br />
     <span>
-      Guests are welcome to dress according to our selected colour theme.
+      Guests are welcome to wear shades of blue.
     </span>
   </p>
 
-  <div className="dresscode-colors">
-    <div className="dresscode-color">
-      <span style={{ backgroundColor: "#b9d3fa" }} />
-      <small>Beige</small>
-    </div>
+  <div className="dresscode-palette">
 
-    <div className="dresscode-color">
-      <span style={{ backgroundColor: "#80cef3" }} />
-      <small>Cream</small>
-    </div>
+    {[
+      { color: "#DCE6F0", name: "Powder Blue" },
+      { color: "#A9BDD2", name: "Dusty Blue" },
+      { color: "#718DAA", name: "Steel Blue" },
+      { color: "#405B78", name: "Navy Blue" }
+    ].map((item) => (
+      <div className="palette-item" key={item.name}>
+        <div
+          className="palette-swatch"
+          style={{ backgroundColor: item.color }}
+        />
+        <small>{item.name}</small>
+      </div>
+    ))}
 
-    <div className="dresscode-color">
-      <span style={{ backgroundColor: "#1e47ae" }} />
-      <small>Mocha</small>
-    </div>
   </div>
+
+  <p className="dresscode-footer">
+    WITH LOVE & APPRECIATION
+  </p>
 
 </div>
       </div>
